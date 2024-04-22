@@ -1,0 +1,5 @@
+const gradosAradianes = grados => (Math.PI / 180) * grados;
+const radianesAgrados = radianes => (180 / Math.PI) * radianes;
+
+console.log(gradosAradianes(90));
+console.log(radianesAgrados(1.5707963267948966));
