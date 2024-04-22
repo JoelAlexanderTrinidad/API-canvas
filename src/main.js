@@ -1,20 +1,12 @@
 const canvas = document.querySelector("#board canvas");
 const ctx = canvas.getContext("2d");
-const { width, height } = canvas;
+const { width: w, height: h } = canvas;
 
-ctx.fillStyle = "black";
-ctx.fillRect(0,0,width,height);
-ctx.fillStyle = "#555";
+ctx.font = "20pt courier"
 
-
-let x, y, radius;
-
-for(let i=0; i < 550; i++){
-    x = Math.random() * width;
-    y = Math.random() * height;
-    radius = Math.random() * 3;
-
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2, false);
-    ctx.fill();
+const center = w / 2;
+ctx.textAlign = "center";
+for (let i = 0; i < 11; i++) {
+ctx.fillText("if you're in the game", center, i * 40); // i * 40 es la coordenada y en cada pasada lo va multiplicando por 40
 }
+ctx.strokeText("strokes the word", center, h - 30);
